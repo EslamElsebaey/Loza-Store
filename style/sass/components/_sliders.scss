@@ -1,0 +1,85 @@
+// new Arrivals
+.newArrivals{
+    background-color: $main-color;
+    position: relative;
+    padding: 75px 0 100px 0 ;
+    .title-text{
+        color: #fff;
+    }
+    .img-holder{
+        text-align: center;
+    }
+ }
+
+ @include max-768 {
+    .newArrivals {
+        padding : 50px 0 80px 0 ;
+      
+        .swiper-pagination-bullet{
+            background-color: #000;
+            opacity: 1;
+        }
+        .swiper-pagination-bullet-active{
+            background-color: #fff;
+        }
+    }
+ }
+ //  *************************************************************************************************
+
+ 
+//  Bestseller
+.bestseller{
+    padding: 75px 0 145px 0;
+    background-repeat: no-repeat;
+    background-position: 50% 233%;
+    .title-text{
+        color: $main-color;
+    }
+    .swiper-button-prev i, .swiper-rtl .swiper-button-next i{
+        font-size: 20px;
+        color: #ffffff;
+    }
+}
+.item-desc{
+    background-color: #fff;
+}
+
+ 
+//  *************************************************************************************************
+ 
+
+// special offers
+
+.special-offers{
+    padding-bottom: 100px ;
+    position: relative;
+    .title-text{
+    text-align: center;
+    text-transform: capitalize;
+    }
+    .img-holder{
+        text-align: center;
+    }
+}
+.item-parent{
+    position: relative;
+}
+
+
+
+//  *************************************************************************************************
+
+
+
+// general 
+
+
+ 
+ @include max-768 {
+    .bestseller , .special-offers  {
+        padding: 50px 0 80px 0;
+    }
+ }
+
+
+

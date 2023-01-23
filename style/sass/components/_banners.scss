@@ -1,0 +1,58 @@
+
+.banners{
+    padding-bottom: 95px;
+}
+.banners-parent{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 30px;
+}
+.banner-link-holder{
+    display: block;
+}
+.banner-item {
+    overflow: hidden;
+    transition: all linear .3s;
+   
+    img{
+        display: block;
+        width: 100%;
+        transform: scale(1.19);
+        transition:  all linear .2s;
+    }
+}
+
+
+@include max-768 {
+    .banners-parent{
+        grid-template-columns: auto;
+        gap: 20px;
+    }   
+    .banners{
+        padding-bottom: 0;
+    }
+    .banner-item{
+        text-align: center;
+       
+    }
+    .banner-item img{
+       max-width: 100%;
+       transition: all linear .3s;
+       transform: scale(1);
+    }
+}
+
+@include min-768 {
+    .banners-parent{
+        grid-template-columns: 1fr 1fr;
+    }   
+    .banner-item{
+        text-align: center;
+        &:hover{
+            img{
+                transform: scale(1);
+            }
+        }
+    }
+  
+}

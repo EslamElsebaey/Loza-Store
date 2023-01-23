@@ -1,0 +1,661 @@
+
+
+.lang{
+cursor: pointer;
+margin-inline-start: 50px;
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+.english{
+    margin-inline-end: 3px;
+    font-size: 12px;
+    color: #808080;
+    font-weight: 300;
+}
+img{
+    width: 17px;
+}
+}
+    
+
+.li-drop {
+    position: relative;
+        > a{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        &:hover{
+            text-decoration: none;
+        }
+        &::after{
+            content: "\f107";
+            font-family: "line Awesome free";
+            font-weight: 900;
+            position: absolute;
+            font-size: 11px;
+            // height: 10px;
+            top: 5px;
+            inset-inline-end: -14px;
+        }
+    }
+    &:hover{
+        .ul-drop {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    .ul-drop{
+        transition: all linear .3s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow:  rgb(0 0 0 / 24%) 0px 3px 8px ;
+        position: absolute;
+        top: 35px;
+        z-index: 11;
+        opacity: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        visibility: hidden;
+        min-width: 165px ;
+        background-color: #fff;
+        padding:10px 15px;
+        li {
+            padding-bottom: 4px;
+            margin-inline-end: 0;
+            width: 100%;
+            text-align: center;
+            a:hover{
+                text-decoration: none;
+            }
+            a{
+                color: #000;
+                font-size: 14px;
+                text-transform: capitalize;
+                font-weight: 300;
+            }
+        }
+        li:last-child{
+            border-bottom: none;
+        }
+        a{
+            font-size: 14px;
+            line-height: 32px;
+            color: #ffffff;
+            text-align: left;
+        }
+    }
+}
+.account-text{
+    display: flex;
+    align-items: center;
+    }
+.mylang-text{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+.main-nav{
+    padding: 14px 0 12px  0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.search{
+    min-width: 265px;
+}
+.search-item {
+    width: 704px;
+    position: relative;
+    input{
+        width: 100%;
+        height: 40px;
+        padding: 0 30px;
+        border-radius: 25px;
+        background-color: #f2f2f2;
+        border: none;
+        font-size: 14px;
+        height: 44px;
+        font-weight: 400;
+        &::placeholder{
+            font-size: 12px;
+            color: #a6a6a6;
+            font-weight: 300;
+        }
+        &:focus{
+            outline: none;
+            border: 1px solid $main-color;
+        }
+}
+}
+
+.search-icon{
+    position: absolute;
+    inset-inline-end: 20px;
+    top: 55%;
+    transform: translateY(-55%);
+    border: none;
+    background: transparent;
+   i {
+    font-size: 20px;
+    color: $main-color;
+    transform: scaleX(-1);
+   }
+}
+
+.account-user{
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .account-text{
+        position: relative;
+        display: flex;
+        align-items: center;
+        i{
+            font-size: 24px;
+            color: $main-color;
+        }
+        span{
+            font-size: 16px;
+        }
+       
+    }
+    }
+
+
+
+.favourite  {
+    margin-inline-start: 30px;
+    i {
+        font-size: 24px;
+        color: $main-color;
+    }
+}
+.arabic{
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 300;
+color: #808080;
+&:hover{
+    text-decoration: none;
+    color: #808080;;
+}
+&:focus{
+    text-decoration: none;
+}
+}
+.lang i{
+    font-size: 8px;
+color: #808080;
+}
+.open-search-btn{
+    transform: scaleX(-1);
+}
+
+
+.logo img{
+    width: 80px;
+}
+
+.cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline-start: 30px;
+}
+.cart div {
+     position: relative;
+}
+.cart i{
+    font-size: 24px;
+    color: $main-color;
+}
+.number{
+    width: 16px;
+    height: 16px;
+    background-color: $second-color;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 9px;
+    font-weight: 700;
+    position: absolute;
+    top: -4px;
+    left: 14px;
+}
+.favourite  i , .account-btn i  {
+    transition: all linear .3s;
+}
+.account-btn-color {
+    color: $main-color;
+}
+
+html[dir ="ltr"]{
+    .li-drop > a::after{
+        top: 4px;
+    }
+    
+}
+
+
+
+
+nav{
+background-color: $main-color;
+padding: 12.5px 0;
+
+.closeBtn{
+    display: none;
+}
+}
+.ul-navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    li:last-child{
+        margin: 0;
+    }
+    li{
+        margin-inline-end: 28px;
+        .nav-ancor{
+            font-size: 14px;
+            color: #fff;
+            text-transform: capitalize;
+            transition: all linear .2s;
+            &:hover{
+                text-decoration: none;
+                color: $second-color;
+            }
+        }
+    }
+}
+
+.open-search {
+    top: 0 !important;
+    transition: all linear .3s !important;
+}
+
+
+
+
+
+.bars , .cart-icon , .open-search-btn{
+    display: none;
+    border: none;
+    background: transparent;
+}
+header{
+    transition: all linear .3s;
+}
+
+nav{
+  .top-header-text{
+    display: none;
+  }
+  .top-header{
+    display: none;
+  }
+}
+.account-user button{
+    background-color: transparent ;
+    border: none ;
+}
+
+.open-nav{
+  inset-inline-start: 0;
+  transition: all linear .3s;
+}
+
+.account-details{
+    padding: 10px 15px;
+    inset-inline-start: -51px;
+    text-align: center;
+    opacity: 0;
+    width: 130px;
+    visibility: hidden;
+    transition: all linear 0.3s;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+    padding: 10px 20px;
+    z-index: 999;
+    top: 34px;
+    li {
+        margin-bottom: 8px;
+    }
+    a{
+        color: #000;
+        font-weight: 300;
+        text-transform: capitalize;
+        &:hover{
+            text-decoration: none;
+        }
+      }
+      a:first-child{
+        margin-bottom: 5px;
+      }
+  }
+
+
+.show-account-details{
+    opacity: 1;
+    visibility: visible;
+}
+ 
+
+
+
+
+
+@media screen and ( max-width : 992px) {
+    .account-user{
+        margin-bottom: 0;
+    }   .main-nav{
+    flex-wrap: wrap;
+    .search{
+        order: 3;
+        width: 100%;
+        margin-top: 12px;
+    }
+    .logo{
+        order: 1;
+    }
+    .account-user{
+        order: 2;
+    }
+    }
+}
+.nav-arrow-rotate::after {
+    transform:  translateY(-50%) rotate(180deg)  !important;
+    top: 10px !important;
+}
+
+@include max-1200{
+    .search-item{
+        width: auto;
+    }
+}
+
+ @include max-768 {
+
+    html[dir="ltr"]{
+        .li-drop .ul-drop li a{
+            text-align: left;
+        }
+    }
+    .li-drop {
+        flex-direction: column;
+        align-items: flex-start !important;
+        width: 100%;
+        a{
+            display: block;
+            width: 100%;
+            color: #000;
+            cursor: pointer;
+            &::after{
+                transition: all linear .3s;
+                position: absolute;
+                inset-inline-end: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 16px;
+            }
+        }
+       .ul-drop{
+        transition: none;
+        background-color: transparent;
+        padding: 0;
+        min-width: auto;
+        position: static;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        padding-top: 10px;
+        transform: translateX(0);
+        display: none;
+        li {
+            margin-bottom: 0;
+            border-bottom: none;
+            margin-inline-start: 10px;
+           
+        }
+            li a {
+                color: $black-color;
+                font-weight: 400;
+                font-size: 13px;
+                text-align: right;
+                line-height: 29px;
+                &::before{
+                    content : "- " ;
+                }
+            }
+        }
+    }
+    .account-details{
+        inset-inline-start: -44px;
+        width: 115px;
+        padding: 8px 10px;
+    }
+    .account-details a{
+        font-size: 13px;
+    }
+    html[dir ="ltr"]{
+        .search-item input{
+            padding: 0 40px 0 15px;
+        }
+        
+    }
+    
+    .search{
+        margin-top: 10px;
+    }
+    .search-item input{
+        height: 40px;
+        width: 100%;
+        border-radius: 30px;
+        background-color: #f2f2f2;
+        transition: all linear 0.3s;
+        max-width: 100%;
+        outline: none !important;
+        border: 1px solid transparent;
+        color: #a6a6a6;
+        padding: 0 25px 0 100px;
+        font-size: 16px;
+        font-weight: 400;
+        &:focus{
+            border: 1px solid $main-color ;
+        }
+   
+    }
+  .favourite{
+    display: none !important;
+  }
+ 
+    .arabic span {
+        display: none;
+    }
+    .main-nav{
+        align-items: center;
+        padding: 10px 0;
+    }
+    .ul-navbar li .nav-ancor{
+        color: #000;
+        font-weight: 400;
+        &:hover{
+            color: #000;
+        }
+    }
+    .mynav{
+        margin-top: 50px;
+    }
+    .number{
+    top: -6px;
+    left: 11px;
+    }
+    
+    .account-user button{
+        background-color: transparent ;
+        border: none !important;
+        display: flex;
+        align-items: center;
+        padding: 0;
+    }
+  .account-text{
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+  .cart{
+    padding: 0;
+  }
+  .bars , .open-search-btn i{
+    font-size: 24px;
+  }
+  .account-user{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+.search{
+    display: none;
+}
+  
+.acc-text{
+  display: none;
+}
+  .ul-navbar li{
+    margin-bottom: 15px;
+    margin-inline-end: 0;
+  }
+  .closeBtn i {
+    color: #808080;
+  }
+
+  nav{
+    margin: 0;
+    transition: all linear .3s ;
+    z-index: 99;
+    position: fixed;
+    inset-inline-start: -100%;
+    padding: 30px 0;
+    width: 100% ;
+    height: 100% ;
+    top: 0;
+    background-color: #fff;
+    .closeBtn{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    border: none;
+    background: transparent;
+    font-size: 22px;
+    }
+ 
+    .ul-navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+   
+    .top-header{
+      display: block;
+      position: absolute;
+      inset-inline-start: 20px ;
+      border-bottom: none;
+     top: 20px;
+  }
+  }
+  .show-lang{
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+ .lang{
+    margin-inline-start: 0;
+ }
+.cart .shoppingText{
+    display: none;
+}
+.account-section{
+    margin-bottom: 0;
+}
+.bars , .search-icon{
+    display: block;
+    inset-inline-end: 15px;
+}
+.account-user .account-text{
+    margin-inline-end: 0;
+    display: flex;
+    align-items: center;
+}
+.account-user{
+    margin-bottom: 0 !important;
+    display: flex;
+    align-items: center;
+}
+
+    .logo img{
+        width: 50px;
+    }
+    .main-nav .lang{
+        display: none;
+    }
+    .account-user button{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .favourite , .cart , .account-user .account-text , .open-search-btn{
+        margin-inline-start: 15px;
+    }
+    .lang-close-holder-mob{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+      }
+
+
+
+@include min-768 {
+    .account-btn{
+        &:hover{
+            color: $main-color;
+        }
+    }
+    .favourite{
+        &:hover {
+            i {
+                color: $main-color;
+            }
+        }
+    }
+       .lang-close-holder-mob .lang{
+        display: none;
+       }
+       .search{
+        display: block !important;
+       }
+       .account-text{
+        &:hover{
+            .account-details{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+      }
+}
+
+
+
