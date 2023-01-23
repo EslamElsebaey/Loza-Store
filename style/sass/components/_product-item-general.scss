@@ -151,7 +151,11 @@
     }
 }
 
-
+@media screen and (max-width : 370px) {
+    .add{
+        padding: 7px 13px;
+    }
+}
 
 @include min-768 {
     .add {

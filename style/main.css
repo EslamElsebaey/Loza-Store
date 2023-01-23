@@ -1211,6 +1211,11 @@ nav .top-header {
     -webkit-box-orient: vertical;
   }
 }
+@media screen and (max-width: 370px) {
+  .add {
+    padding: 7px 13px;
+  }
+}
 @media only screen and (min-width: 768px) {
   .add:hover {
     background-color: #aa78bd;
