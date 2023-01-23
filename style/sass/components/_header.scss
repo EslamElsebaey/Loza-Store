@@ -154,6 +154,7 @@ align-items: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
+   
     .account-text{
         position: relative;
         display: flex;
@@ -173,6 +174,11 @@ align-items: center;
 
 .favourite  {
     margin-inline-start: 30px;
+    &:hover{
+        i{
+            color: $second-color;
+        }
+    }
     i {
         font-size: 24px;
         color: $main-color;
@@ -209,6 +215,14 @@ color: #808080;
     justify-content: center;
     align-items: center;
     margin-inline-start: 30px;
+    i{
+        transition: all linear .2s;
+    }
+    &:hover{
+        i{
+            color: $second-color;
+        }
+    }
 }
 .cart div {
      position: relative;
@@ -631,14 +645,14 @@ nav{
 @include min-768 {
     .account-btn{
         &:hover{
-            color: $main-color;
+            i{
+                color: $second-color;
+            }
         }
     }
-    .favourite{
-        &:hover {
-            i {
-                color: $main-color;
-            }
+    .account-btn{
+        &:hover{
+            color: $main-color;
         }
     }
        .lang-close-holder-mob .lang{

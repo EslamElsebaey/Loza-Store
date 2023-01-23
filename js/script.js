@@ -196,41 +196,30 @@ $(".footer-title").click(function(e){
 //fixed nav
 
     //~~~~~~~~~ fixed header
-$(window).on("scroll", function () {
-  if ($(window).scrollTop() > 150) {
     if($(window).width() < 768){
-      $("header").addClass("fixed");
-      $(".search").css("display" , "none");
-      $(".open-search-btn").css("display" , "block") ;
-      $(".open-search-btn i").removeClass("la-times") ;
-      $("header").css("box-shadow" , "rgba(0, 0, 0, 0.24) 0px 3px 8px")
-    }else{
-      $("nav").css("display" , "none");
-      $("header").addClass("fixed");
-      $(".search").css("display" , "none");
-      $("header").css("box-shadow" , "rgba(0, 0, 0, 0.24) 0px 3px 8px")
+      $(window).on("scroll", function () {
+        if ($(window).scrollTop() > 150) {
+            $("header").addClass("fixed");
+            $(".search").css("display" , "none");
+            $(".open-search-btn").css("display" , "block") ;
+            $(".open-search-btn i").removeClass("la-times") ;
+            $("header").css("box-shadow" , "rgba(0, 0, 0, 0.24) 0px 3px 8px")
+        } else {
+            $("header").removeClass("fixed");
+            $(".search").css("display" , "block");
+            $(".open-search-btn").css("display" , "none") ;
+            $("header").css("box-shadow" , "none");
+        }
+      });
+      var fixedBar = document.querySelector("header"),
+      prevScrollposition = $(window).scrollTop();
+        
+      (window.onscroll = function () {
+        var o = $(window).scrollTop();
+        prevScrollposition < o && prevScrollposition > 0 ? fixedBar.classList.add("fixsedt") : fixedBar.classList.remove("fixsedt"), (prevScrollposition = o);
+      })   
     }
-  } else {
-    if($(window).width() < 768){
-      $("header").removeClass("fixed");
-      $(".search").css("display" , "block");
-      $(".open-search-btn").css("display" , "none") ;
-      $("header").css("box-shadow" , "none");
-    }else{
-      $("nav").css("display" , "block");
-      $("header").removeClass("fixed");
-      $("header").css("box-shadow" , "none");
-    }
-  
-  }
-});
-var fixedBar = document.querySelector("header"),
-prevScrollposition = $(window).scrollTop();
-  
-(window.onscroll = function () {
-  var o = $(window).scrollTop();
-  prevScrollposition < o && prevScrollposition > 0 ? fixedBar.classList.add("fixsedt") : fixedBar.classList.remove("fixsedt"), (prevScrollposition = o);
-})   
+
     
 
 

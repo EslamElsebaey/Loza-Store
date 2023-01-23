@@ -551,6 +551,9 @@ img {
   -webkit-margin-start: 30px;
           margin-inline-start: 30px;
 }
+.favourite:hover i {
+  color: #aa78bd;
+}
 .favourite i {
   font-size: 24px;
   color: #471b4e;
@@ -589,6 +592,12 @@ img {
   align-items: center;
   -webkit-margin-start: 30px;
           margin-inline-start: 30px;
+}
+.cart i {
+  transition: all linear 0.2s;
+}
+.cart:hover i {
+  color: #aa78bd;
 }
 
 .cart div {
@@ -984,10 +993,10 @@ nav .top-header {
   }
 }
 @media only screen and (min-width: 768px) {
-  .account-btn:hover {
-    color: #471b4e;
+  .account-btn:hover i {
+    color: #aa78bd;
   }
-  .favourite:hover i {
+  .account-btn:hover {
     color: #471b4e;
   }
   .lang-close-holder-mob .lang {
@@ -1727,6 +1736,7 @@ html[dir=ltr] .send i {
   }
   .logo-text h3 {
     text-align: center;
+    width: auto;
   }
   .social a {
     margin: 0 10px;
