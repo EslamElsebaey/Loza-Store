@@ -36,6 +36,12 @@
     text-align: center;
     width: 100%;
     padding: 15px 20px;
+    > a{
+        text-decoration: none;
+        &:hover{
+            text-decoration: none;
+        }
+    }
     .brand-name {
         margin: 0;
         overflow: hidden;
@@ -161,6 +167,15 @@
     .add {
         &:hover{
             background-color: $second-color;
+        }
+    }
+    .img-holder{
+        overflow: hidden;
+    }
+    .img-holder img{
+        transition: all linear .2s;
+        &:hover{
+            transform: scale(1.1);
         }
     }
 }

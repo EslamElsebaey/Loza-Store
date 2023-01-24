@@ -10,10 +10,6 @@
     margin: 0 70px;
 }
 .myproduct-item{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     &:hover{
         .product-name{
             color: $second-color;
@@ -23,15 +19,7 @@
         transition: all linear .3s;
     }
 }
-.product-holder{
-    width: 156px;
-    height: 156px;
-    border-radius: 50%;
-    background-color: $second-color;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 .product-ancor{
     display: block;
     &:hover{
@@ -61,38 +49,39 @@ text-transform: capitalize;
     .myproduct-item:first-child{
         margin-inline-end: 0px;
     }
+    .myproduct-item{
+        // width: 100%;
+        width: 100px !important;
+        img{
+            width: 100%;
+        }
+    }
+    .products-parent{
+        overflow-x: auto;
+        // justify-content: unset;
+    }
+    // .product-holder{
+    //     width: 100% ;
+    //     img{
+    //         width: 100%;
+    //     }
+    // }
     .products{
         padding: 40px   0;
     }
     .product-name{
-        font-size: 14px;
+        font-size: 13px;
         margin-top: 15px;
     }
-    .product-holder{
-        width: 140px;
-        height: 140px;
-        img{
-            width: 35px;
-        }
-    }
-    .products-parent{
-       flex-wrap: wrap;
-       justify-content: space-between;
-    }
     .myproduct-item:nth-child(2){
-        margin: 0 ;
+        margin: 0 15px ;
     }
-    .myproduct-item:last-of-type{
-        margin: 30px auto 0 auto;
-        img{
-            width: 25px;
-        }
-    }
+
 }
 
 
 @include min-768 {
-    .plate-name{
+    .product-name{
         &:hover{
             color: $main-color;
         }

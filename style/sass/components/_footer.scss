@@ -73,7 +73,7 @@ ul li {
     text-transform: capitalize;
     transition: all linear .2s;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 300;
     &:hover{
         color: $main-color;
     }
@@ -180,11 +180,11 @@ img{
 }
 .social{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     margin-top: 25px;
     a{
-       margin-inline-start: 10px;
+       margin-inline-end: 10px;
         width: 40px;
         height: 40px;
         border-radius: 50%;
@@ -211,9 +211,6 @@ img{
 @include max-992 {
     .social{
         justify-content: center;
-        a{
-            margin: 0;
-        }
     }
    
 }
@@ -223,9 +220,6 @@ img{
 @include max-768 {
     .social-footer{
         margin-bottom: 20px;
-    }
-    .social-newsletter{
-        display: none;
     }
     .footer-items{
         flex-direction: column;
@@ -297,6 +291,9 @@ img{
          }
     }
      
+    .social a:last-of-type{
+        margin-inline-end: 0;
+    }
    
     .quick-links ul li{
         font-size: 14px;
@@ -350,11 +347,6 @@ img{
         text-align: center;
         width: auto;
     }
-    .social a{
-       margin: 0 10px;
-        width: 35px;
-        height: 35px;
-    }
     .social i {
         font-size: 18px;
     }
@@ -386,9 +378,6 @@ img{
 
 
 @include min-768 {
-    .social-footer{
-        display: none;
-    }
     .img-item{
         transform: translateY(-20px);
     }

@@ -97,8 +97,17 @@
 
 @include min-1200{
 .mainBanner{
-    height: calc(100vh - 160.11px);
+    height: calc(100vh - 188px);
 }
+}
+
+@include max-1200{
+    .ul-navbar li .nav-ancor{
+        font-size: 13px;
+    }
+    .ul-navbar li{
+        margin-inline-end: 22px;
+    }
 }
 
 @include max-992{
@@ -110,11 +119,6 @@
 @include max-768{
     .mainBanner{
         padding-top: 0;
-    }
-    .mainBanner{
-        .swiper-pagination-bullet-active{
-            background-color: $main-color !important;
-        }
     }
 
 

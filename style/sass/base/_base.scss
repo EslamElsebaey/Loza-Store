@@ -150,7 +150,6 @@ img {
   right: 25px;
   bottom: 92px;
   background-color: rgba($color: #000000, $alpha: 0.302);
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -234,7 +233,9 @@ img {
   transition: all linear .5s;
 }
 
-
+.swiper-pagination-bullet-active{
+  background-color: $second-color;
+}
 
 
 @include max-768 {

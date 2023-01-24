@@ -17,11 +17,23 @@
     img{
         display: block;
         width: 100%;
-        transform: scale(1.19);
         transition:  all linear .2s;
     }
 }
 
+@keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+   .banner-item img:hover {
+    opacity: 1;
+    animation: flash 1.5s;
+   }
 
 @include max-768 {
     .banners-parent{
@@ -38,7 +50,6 @@
     .banner-item img{
        max-width: 100%;
        transition: all linear .3s;
-       transform: scale(1);
     }
 }
 
@@ -48,11 +59,6 @@
     }   
     .banner-item{
         text-align: center;
-        &:hover{
-            img{
-                transform: scale(1);
-            }
-        }
     }
   
 }
