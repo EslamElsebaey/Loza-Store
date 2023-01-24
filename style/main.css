@@ -1145,6 +1145,10 @@ nav .top-header {
   font-weight: 400;
   text-align: center;
   text-transform: capitalize;
+  transition: all linear 0.2s;
+}
+.item-desc .brand-name:hover {
+  color: #aa78bd;
 }
 
 .price {
@@ -1284,6 +1288,7 @@ nav .top-header {
 }
 
 .feature-title1 {
+  line-height: 1.4;
   font-size: 14px;
   color: #ffffff;
   font-weight: 700;

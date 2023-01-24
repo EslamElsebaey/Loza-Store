@@ -56,6 +56,10 @@
         font-weight: 400;
         text-align: center;
         text-transform: capitalize;
+        transition: all linear .2s;
+        &:hover{
+            color: $second-color;
+        }
     }
 }
 .price{
