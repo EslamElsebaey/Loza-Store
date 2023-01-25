@@ -95,11 +95,7 @@
 }
 
 
-@include min-1200{
-.mainBanner{
-    height: calc(100vh - 188px);
-}
-}
+
 
 @include max-1200{
     .ul-navbar li .nav-ancor{
